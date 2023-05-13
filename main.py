@@ -29,12 +29,9 @@ def predict(image_file):
 
 
 
-def predict_url(image_fname, image_origin):
-
-    image_file = tf.keras.utils.get_file(image_fname, origin = image_origin)
-    return predict(image_file)
 
 
-predict_url()
-x=0
+
+
+x=1
 predict(f'img{x+1}.jpg')
