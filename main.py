@@ -13,7 +13,7 @@ batch_size = 32
 epochs = 20
 learning_rate = 0.0001
 
-
+#dsdsd
 model = tf.keras.models.load_model('model')
 
 
