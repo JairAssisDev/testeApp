@@ -5,7 +5,7 @@ app= Flask(__name__)
 
 @app.route('/teste', methods=["GET"])
 def get_test():
-    return jsonify(teste('img2.jpg'))
+    return jsonify(teste('img1.jpg'))
 
 app.run()
 
