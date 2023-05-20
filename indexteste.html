@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envio de Imagem</title>
+</head>
+<body>
+    <h1>Envio de Imagem para Análise</h1>
+    <form action="http://localhost:5000/analise" method="POST" enctype="multipart/form-data">
+        <input type="file" name="imagem" accept="image/*">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
