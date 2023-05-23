@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from main import teste
 import os
+
 app = Flask(__name__)
 
 @app.route('/analise', methods=['POST'])
@@ -32,11 +33,11 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def save_temporary_image(imagem):
-    # Verifique se o diretório temporário existe, se não, crie-o
-    diretorio_temporario = 'caminho/para/diretorio/temp/'
+    # Verifica se o diretório temporário existe, se não, crie-o
+    diretorio_temporario = '/home/jair/Documentos/testeApp/temp/'
     os.makedirs(diretorio_temporario, exist_ok=True)
 
-    # Gere um nome único para o arquivo de imagem temporário
+    # Gera um nome único para o arquivo de imagem temporário
     nome_arquivo_temporario = 'imagem_temp.jpg'
     caminho_temporario = os.path.join(diretorio_temporario, nome_arquivo_temporario)
 
@@ -51,4 +52,4 @@ def remove_temporary_image(caminho_temporario):
     os.remove(caminho_temporario)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
